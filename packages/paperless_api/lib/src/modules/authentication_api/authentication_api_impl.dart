@@ -18,8 +18,8 @@ class PaperlessAuthenticationApiImpl implements PaperlessAuthenticationApi {
         "/api/token/",
         data: {"username": username, "password": password, "code": code},
         options: Options(
-          sendTimeout: const Duration(seconds: 5),
-          receiveTimeout: const Duration(seconds: 5),
+          sendTimeout: const Duration(seconds: 30),
+          receiveTimeout: const Duration(seconds: 60),
           followRedirects: false,
           headers: {"Accept": "application/json"},
         ),
